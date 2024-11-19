@@ -19,7 +19,7 @@ id_cli int,
 foreign key (id_cli) references cadastro_cliente(id_cli),
 desc_problema varchar (200),
 criticidade enum ("baixa", "média", "alta"),
-status_chamado enum  ("aberto", "em andamento", "resolvido"),
+status_chamado enum  ("aberto", "em andamento", "resolvido") default 'aberto',
 data_abertura date,
 id_colab int,
 foreign key (id_colab) references colaboradores(id_colab)
